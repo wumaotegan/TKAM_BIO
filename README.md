@@ -67,7 +67,7 @@ The workflow contains three main components:
 └── requirements_model.txt
 
 ```
-The `data/` and `predict_models/` directories are hosted on Zenodo:https://doi.org/10.5281/zenodo.20810355. 
+The `data/` and `predict_models/` directories are hosted on Zenodo:https://doi.org/10.5281/zenodo.20815599. 
 Please download the archive, unzip it, and place the extracted `data/` and `predict_models/` directories at the repository root.
 
 ## Environments
