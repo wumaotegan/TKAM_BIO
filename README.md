@@ -355,7 +355,7 @@ data/processed/bioassay/hepatotoxicity/assay_processed/
 best_full_finetuned_model/
 ```
 
-For each bioassay task \(k\), the effective sampling size \(|S_k|\) is defined as:
+For each bioassay task \(k\), the effective sampling size $|S_k| $is defined as:
 
 $$
 |S_k| =
