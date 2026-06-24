@@ -71,6 +71,7 @@ The `data/` and `predict_models/` directories are hosted on Zenodo:https://doi.o
 
 Please download and extract the Zenodo archive, and then place the extracted directories as follows:
 
+```text
 TKAM_BIO/
 ├── data/
 └── code/
@@ -78,7 +79,7 @@ TKAM_BIO/
         └── predict_models/
             ├── TKAM_heptox_models/
             └── TKAM_reprotox_models/
-
+```
 Specifically:
 
 Place the extracted data/ directory in the repository root.
