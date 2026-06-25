@@ -68,7 +68,22 @@ The workflow contains three main components:
 
 ```
 The `data/` and `predict_models/` directories are hosted on Zenodo:https://doi.org/10.5281/zenodo.20815599. 
-Please download the archive, unzip it, and place the extracted `data/` and `predict_models/` directories at the repository root.
+
+Please download and extract the Zenodo archive, and then place the extracted directories as follows:
+
+```text
+TKAM_BIO/
+├── data/
+└── code/
+    └── predict/
+        └── predict_models/
+            ├── TKAM_heptox_models/
+            └── TKAM_reprotox_models/
+```
+Specifically:
+
+Place the extracted data/ directory in the repository root.
+Place the extracted predict_models/ directory under code/predict/.
 
 ## Environments
 
@@ -355,7 +370,7 @@ data/processed/bioassay/hepatotoxicity/assay_processed/
 best_full_finetuned_model/
 ```
 
-For each bioassay task \(k\), the effective sampling size \(|S_k|\) is defined as:
+For each bioassay task \(k\), the effective sampling size $|S_k| $is defined as:
 
 $$
 |S_k| =
