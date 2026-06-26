@@ -1091,59 +1091,31 @@ def init_worker():
     global EMBEDDING_FUNCTION, dimension
     EMBEDDING_FUNCTION, dimension = load_embedding_model(EMBEDDING_MODEL)
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
 
-#     # graph = create_graph_database_connection(uri, userName, password)
-#     # EMBEDDING_FUNCTION, dimension = load_embedding_model(EMBEDDING_MODEL)
-#     # update_graph(graph)
-#     #
-#     # file_list = os.listdir(MERGED_DIR)
 
-#     # print(f"Processing {len(file_list)} files with multiprocessing...")
-#     #
-#     # pool = Pool(3, initializer=init_worker)
 
-#     # pool.map(test_graph_from_file_local_file, file_list[468:])
-#     #
-#     # pool.close()
-#     # pool.join()
+    # main_graph = create_graph_database_connection(uri, userName, password)
+    # EMBEDDING_FUNCTION, dimension = load_embedding_model(EMBEDDING_MODEL)
+    # update_graph(main_graph)
+    # main_graph._driver.close() 
 
-#     main_graph = create_graph_database_connection(uri, userName, password)
-#     EMBEDDING_FUNCTION, dimension = load_embedding_model(EMBEDDING_MODEL)
-#     update_graph(main_graph)
-#     main_graph._driver.close() 
+    # file_list = os.listdir(MERGED_DIR)
+    # print(f"Processing {len(file_list)} files...")
 
-#     error_files= pd.read_csv("./bioassays_without_successful_kg_extraction.csv")
-#     file_list = error_files["FileName"].tolist()
+    # pool = Pool(3, initializer=init_worker)
 
-#     # Define the error log path.
-#     error_log_file = "processing_errors_2.txt"
+    # results_iterator = pool.imap_unordered(test_graph_from_file_local_file, file_list)
 
-#     # Clear or create the error log file.
-#     with open(error_log_file, "w", encoding="utf-8") as f:
-#         f.write(f"Start processing at {datetime.now()}\n")
+    # for result in tqdm(results_iterator, total=len(file_list)):
+    #     if result['status'] == 'failed':
+    #         file_name = result['file_name']
+    #         error_msg = result['error']
+    #         print(f"Failed: {file_name}")
+    #     else:
+    #         pass
 
-#     print(f"Processing {len(file_list)} files...")
-
-#     # Use initializer=init_worker.
-#     pool = Pool(3, initializer=init_worker)
-
-#     # Use imap_unordered to receive results as they become available.
-#     results_iterator = pool.imap_unordered(test_graph_from_file_local_file, file_list)
-
-#     # Process results as they arrive.
-#     for result in tqdm(results_iterator, total=len(file_list)):
-#         if result['status'] == 'failed':
-#             file_name = result['file_name']
-#             error_msg = result['error']
-
-#             print(f"Failed: {file_name}")
-#             with open(error_log_file, "a", encoding="utf-8") as f:
-#                 f.write(f"{file_name} | Error: {error_msg}\n")
-#         else:
-#             pass
-
-#     pool.close()
-#     pool.join()
-#     print("All tasks finished.")
+    # pool.close()
+    # pool.join()
+    # print("All tasks finished.")
 
