@@ -1,6 +1,6 @@
 ﻿ # TKAM: Toxicity Knowledge-Augmented Modeling
 
-This repository provides the workflow code, data organization, model-training pipeline, and prediction interfaces associated with the manuscript by Yang et al., **_Automated Knowledge-guided Retrieval of In Vitro Bioactivity Enables In Vivo Toxicity Extrapolation via Curriculum Multi-endpoint Learning_**.
+This repository provides the workflow code, data organization, model-training pipeline, and prediction interfaces associated with the manuscript by Yang et al., **_Automated Knowledge-guided Retrieval and Transfer of Bioactivity Data for Predicting Chemical Apical Toxicity_**.
 
 Toxicity knowledge-augmented modeling (TKAM) addresses the scarcity of in vivo toxicity labels for per- and polyfluoroalkyl substances (PFAS) by integrating PubChem BioAssay data, adverse outcome pathway (AOP) knowledge, semantic and knowledge-graph retrieval, ensemble large language model (LLM) reasoning, and curriculum multi-task learning. The current implementation supports hepatotoxicity (HepTox) and reproductive toxicity (ReproTox) classification.
 
